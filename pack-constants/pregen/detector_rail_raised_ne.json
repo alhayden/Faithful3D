@@ -1,0 +1,6 @@
+{
+    "parent": "block/master_detector_rail_raised_ne",
+    "textures": {
+        "rail": "block/detector_rail"
+    }
+}

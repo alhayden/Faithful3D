@@ -1,0 +1,6 @@
+{
+    "parent": "block/rail_activator_f",
+    "textures": {
+        "rail": "block/activator_rail"
+    }
+}

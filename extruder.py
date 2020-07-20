@@ -435,7 +435,7 @@ def gen_fire():
 
 
 def main():
-    gen_fire()
+#    gen_fire()
     gen_stonecutter()
     gen_coral_fan()
     gen_coral_wall()

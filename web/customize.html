@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=UTF-8>
+		<title>Faithful 3D - Download</title>
+	</head>
+	<body style='padding:0px;background-image:url(images/bg.png);text-align:center;'style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" unselectable="on" onselectstart="return false;" onmousedown="return false;">
+		<div width="100%" style='padding:0px;'>
+			<img src="images/faithful3d-logo.png" draggable="false" />
+		</div>
+		<div width="100%" style='padding:0px;margin-bottom:20px'>
+			<img src="images/customize.png" draggable="false" />
+		</div>
+		<div width="100%" height="1216px">
+			<img src="images/3dbutton-on-0.png" style="padding-bottom:16px" id="flowers" draggable="false" onclick="toggle(this.id, 0)" onmouseover="mouseover(this.id)" onmouseout="mouseoff(this.id)"/>
+			<img src="images/box-flowers.png" style="padding-left:6px" draggable="false" title="Flowers, double flowers, and saplings">
+		</div>
+		<div width="100%" height="1216px">
+			<img src="images/3dbutton-off-0.png" style="padding-bottom:16px" id="grass" draggable="false" onclick="toggle(this.id, 1)" onmouseover="mouseover(this.id)" onmouseout="mouseoff(this.id)"/>
+			<img src="images/box-grass.png" style="padding-left:6px" draggable="false" title="Grass, ferns, and double variants">
+		</div>
+		<div width="100%" height="1216px">
+			<img src="images/3dbutton-on-0.png" style="padding-bottom:16px" id="crops" draggable="false" onclick="toggle(this.id, 2)" onmouseover="mouseover(this.id)" onmouseout="mouseoff(this.id)"/>
+			<img src="images/box-crops.png" style="padding-left:6px" draggable="false" title="Crops and stems">
+		</div>
+		<div width="100%" height="1216px">
+			<img src="images/3dbutton-off-0.png" style="padding-bottom:16px" id="seaflora" draggable="false" onclick="toggle(this.id, 3)" onmouseover="mouseover(this.id)" onmouseout="mouseoff(this.id)"/>
+			<img src="images/box-seaflora.png" style="padding-left:6px" draggable="false" title="Kelp, seagrasses, and corals">
+		</div>
+		<div width="100%" height="1216px">
+			<img src="images/3dbutton-on-0.png" style="padding-bottom:16px" id="netherflora" draggable="false" onclick="toggle(this.id, 4)" onmouseover="mouseover(this.id)" onmouseout="mouseoff(this.id)"/>
+			<img src="images/box-netherflora.png" style="padding-left:6px" draggable="false" title="Nether vines and shoots">
+		</div>
+		<div width="100%" height="1216px">
+			<img src="images/3dbutton-on-0.png" style="padding-bottom:16px" id="otherflora" draggable="false" onclick="toggle(this.id, 5)" onmouseover="mouseover(this.id)" onmouseout="mouseoff(this.id)"/>
+			<img src="images/box-otherflora.png" style="padding-left:6px" draggable="false" title="Vines, reeds, and lily pads">
+		</div>
+		<div width="100%" height="1216px">
+			<img src="images/3dbutton-on-0.png" style="padding-bottom:16px" id="fungi" draggable="false" onclick="toggle(this.id, 6)" onmouseover="mouseover(this.id)" onmouseout="mouseoff(this.id)"/>
+			<img src="images/box-fungi.png" style="padding-left:6px" draggable="false" title="Mushrooms and Nether fungi">
+		</div>
+		<div width="100%" height="1216px">
+			<img src="images/3dbutton-on-0.png" style="padding-bottom:16px" id="rails" draggable="false" onclick="toggle(this.id, 7)" onmouseover="mouseover(this.id)" onmouseout="mouseoff(this.id)"/>
+			<img src="images/box-rails.png" style="padding-left:6px" draggable="false" title="Powered, detector, activator, and normal rails">
+		</div>
+		<div width="100%" height="1216px">
+			<img src="images/3dbutton-off-0.png" style="padding-bottom:16px" id="redstone" draggable="false" onclick="toggle(this.id, 8)" onmouseover="mouseover(this.id)" onmouseout="mouseoff(this.id)"/>
+			<img src="images/box-redstone.png" style="padding-left:6px" draggable="false" title="Redstone wires">
+		</div>
+		<div width="100%" height="1216px">
+			<img src="images/3dbutton-on-0.png" style="padding-bottom:16px" id="otherblocks" draggable="false" onclick="toggle(this.id, 9)" onmouseover="mouseover(this.id)" onmouseout="mouseoff(this.id)"/>
+			<img src="images/box-otherblocks.png" style="padding-left:6px" draggable="false" title="Iron bars, chains, ladders, cobwebs, and stonecutters">
+		</div>
+		<img src="images/download-button.png" style="padding:32px" onmouseover="this.src='images/download-button-a.png'" onmouseout="this.src='images/download-button.png'" onclick="download()">
+		<script src="customize.js"></script>
+	</body>
+</html>
+
