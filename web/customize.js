@@ -5,11 +5,11 @@ function dothing() {}
 
 function mouseover(id) {
 	element = document.getElementById(id);
-	element.src = element.src.replace("-0", "-1");
+	element.src = element.src.slice(0, -5) + "1.png";
 };
 function mouseoff(id) {
 	element = document.getElementById(id);
-	element.src = element.src.replace("-1", "-0");
+	element.src = element.src.slice(0, -5) + "0.png";
 }
 function toggle(id, index) {
 	element = document.getElementById(id);
