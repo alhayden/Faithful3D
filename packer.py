@@ -3,11 +3,13 @@ from extruder import *
 import zipfile
 import json
 import shutil
+import os
 
 mpath = "assets/minecraft/models/block/"
 tpath = "assets/minecraft/textures/block/"
 tmp = {"parent": "minecraft:block/$parent", "textures":{"$textname":"minecraft:block/$textfile"}}
 VERSION = "1.0.1"
+DEPLOY_DIR = "deploy"
 basic_json = json.dumps(tmp)
 
 def main():
@@ -19,6 +21,18 @@ def main():
                 if (x >> i) & 1 == 1:
                     functions[i](zf)
     shutil.copyfile(f'web/cdn/Faithful3D-{VERSION}-custom-1023.zip', f'web/cdn/Faithful3D-{VERSION}.zip')
+    try:
+        shutil.rmtree(DEPLOY_DIR)
+    except:
+        pass
+    shutil.copytree('web', DEPLOY_DIR)
+    for fname in os.listdir(DEPLOY_DIR):
+        if ".html" in fname or ".js" in fname:
+            contents = ''
+            with open(f'{DEPLOY_DIR}/{fname}', 'r') as web_file:
+                contents = web_file.read().replace('$VER', VERSION)
+            with open(f'{DEPLOY_DIR}/{fname}', 'w') as web_file:
+                web_file.write(contents)
 
 def all(zf):
     zf.write('pack-constants/pack.mcmeta', 'pack.mcmeta')

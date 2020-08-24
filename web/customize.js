@@ -29,5 +29,5 @@ function download() {
 			n += Math.pow(2, x);
 	}
 	console.log(n);
-	window.location.href= "cdn/Faithful3D-1.0.1-custom-" + n + ".zip"
+	window.location.href= "cdn/Faithful3D-$VER-custom-" + n + ".zip"
 }
