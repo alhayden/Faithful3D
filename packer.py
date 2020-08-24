@@ -2,20 +2,23 @@
 from extruder import *
 import zipfile
 import json
+import shutil
 
 mpath = "assets/minecraft/models/block/"
 tpath = "assets/minecraft/textures/block/"
 tmp = {"parent": "minecraft:block/$parent", "textures":{"$textname":"minecraft:block/$textfile"}}
+VERSION = "1.0.1"
 basic_json = json.dumps(tmp)
 
 def main():
     functions = [flowers, grass, crops, seaflora, netherflora, otherflora, fungi, rails, redstone, otherblocks]
     for x in range(1024):
-        with zipfile.ZipFile(f'web/cdn/Faithful3D-1.0-custom-{x}.zip', 'w') as zf:
+        with zipfile.ZipFile(f'web/cdn/Faithful3D-{VERSION}-custom-{x}.zip', 'w') as zf:
             all(zf)
             for i in range(len(functions)):
                 if (x >> i) & 1 == 1:
                     functions[i](zf)
+    shutil.copyfile(f'web/cdn/Faithful3D-{VERSION}-custom-1023.zip', f'web/cdn/Faithful3D-{VERSION}.zip')
 
 def all(zf):
     zf.write('pack-constants/pack.mcmeta', 'pack.mcmeta')
